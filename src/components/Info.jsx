@@ -25,7 +25,7 @@ const Info = () => {
                     </p>
                 </div>
 
-                <button className="boton-inscribirse" onClick={""}>
+                <button className="boton-inscribirse" onClick={() => document.querySelector('#inscribirse').scrollIntoView({behavior: "smooth"})}>
                     <img src={inscribete}></img>
                 </button>
             </div>

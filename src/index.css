@@ -64,7 +64,9 @@
 html, body {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  transition: all .5s;
 }
+
 
 p {
   margin: 0;

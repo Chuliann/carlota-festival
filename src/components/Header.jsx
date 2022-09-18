@@ -14,6 +14,13 @@ const Header = () => {
         document.querySelector("body").classList.toggle("blur-a");
     };
 
+    const subir = () => {
+      if(expandido) {
+        handleMenu();
+      }
+      document.querySelector('#inicio').scrollIntoView({ behavior: "smooth" });
+    }
+
     const handleNav = (valor) => {
         handleMenu();
         document
@@ -23,8 +30,9 @@ const Header = () => {
 
     useEffect(() => {
         let lastScroll = window.scrollY;
+        let navPos = window.visualViewport.height * 70 / 100 + 62;
         const handleScroll = (event) => {
-            if (lastScroll > 500) {
+            if (lastScroll > navPos) {
                 setComportamiento(true);
                 if (lastScroll < window.scrollY) {
                     setNavOculta(true);
@@ -118,7 +126,7 @@ const Header = () => {
 
             <div id="overlay" onClick={() => handleMenu()}></div>
             <button 
-              onClick={() => document.querySelector('#inicio').scrollIntoView({ behavior: "smooth" })} className={`arrow-up ${!navOculta && comportamiento ? "comportamiento" : ""}`}>
+              onClick={() => subir()} className={`arrow-up ${!navOculta && comportamiento ? "comportamiento" : ""}`}>
                 <img src={slider} alt="up-arrow"></img>
             </button>
         </header>
