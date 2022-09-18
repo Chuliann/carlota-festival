@@ -1,5 +1,5 @@
-import logo2 from "../img/logo2.png";
-import slide from "../img/slide.png";
+import logo2 from "../img/logo2.webp";
+import slide from "../img/slide.webp";
 import "../styles/nosotros.css";
 
 const Nosotros = () => {

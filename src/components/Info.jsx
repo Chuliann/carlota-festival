@@ -1,9 +1,9 @@
-import barras from "../img/barras.png";
-import barras2 from "../img/barras2.png";
-import inscribete from "../img/inscribete.png";
-import barrasMovil from "../img/barras-movil.png";
-import barras2Movil from "../img/barras2Movil.png";
-import cartel from "../img/cartel.png";
+import barras from "../img/barras.webp";
+import barras2 from "../img/barras2.webp";
+import inscribete from "../img/inscribete.webp";
+import barrasMovil from "../img/barras-movil.webp";
+import barras2Movil from "../img/barras2Movil.webp";
+import cartel from "../img/cartel.webp";
 import "../styles/festival.css";
 
 const Info = () => {

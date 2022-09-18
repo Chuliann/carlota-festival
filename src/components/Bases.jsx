@@ -1,5 +1,5 @@
 import "../styles/bases.css";
-import Botòn from "../img/Botòn.png";
+import Botòn from "../img/Botòn.webp";
 
 const Bases = () => {
 

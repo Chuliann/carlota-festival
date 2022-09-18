@@ -1,6 +1,6 @@
-import logo from "../img/logo.png";
+import logo from "../img/logo.webp";
 import cerrar from "../img/cerrar.svg";
-import slider from "../img/slide.png";
+import slider from "../img/slide.webp";
 import { useEffect, useState } from "react";
 import "../styles/header.css";
 

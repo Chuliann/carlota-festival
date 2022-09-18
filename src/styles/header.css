@@ -1,5 +1,5 @@
 .idiomas {
-    background-image: url(../img/Fondo1.png);
+    background-image: url(../img/Fondo1.webp);
     height: 70vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -96,7 +96,7 @@
     transition: all 0.4s ease-in-out;
     z-index: 10;
     padding: 5rem 2rem 2rem 2rem;
-    background-image: url(../img/Fondo1.png);
+    background-image: url(../img/Fondo1.webp);
 }
 .nav-items.expandido {
     right: 0;
