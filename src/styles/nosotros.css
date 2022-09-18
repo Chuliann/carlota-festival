@@ -1,0 +1,124 @@
+/* NOSOTROS */
+#nosotros {
+    padding: 4rem 2rem 4rem 2rem;
+    background-color: var(--negro-cafe);
+    text-align: center;
+    position: relative;
+}
+
+#nosotros h2 {
+    color: var(--morado);
+    font-size: 5rem;
+    font-family: "Montserrat";
+    margin: 3rem 0 0 0;
+}
+
+#nosotros h3 {
+    font-family: "Montserrat";
+    margin: 2rem 0;
+    color: var(--amarillo);
+    font-size: 1.7rem;
+}
+
+#nosotros p {
+    font-family: "MontserratRegular";
+    color: #fff;
+    font-size: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#nosotros p:last-of-type {
+    margin-bottom: 2rem;
+}
+
+.logo2 img {
+    margin: 0 auto;
+    max-width: 250px;
+    width: 100%;
+    display: flex;
+    z-index: 3;
+    position: absolute;
+    top: calc(50% - 22px);
+    left: calc(50% - 150px);
+    background-color: var(--negro-cafe);
+    padding: 1rem 2rem;
+}
+.logo2 {
+    position: relative;
+}
+
+.logo2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 130%;
+    left: -50px;
+    top: calc(50% - 5px);
+    margin: 1rem;
+    z-index: 1;
+    height: 10px;
+    background-color: #fff;
+}
+
+.colaborar {
+    background-color: #fff;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+    padding: 0.3rem 1rem;
+    border-radius: 1rem;
+}
+
+.slider {
+    position: absolute;
+    max-width: 90px;
+    bottom: -40px;
+    left: calc(50% - 45px);
+}
+
+
+@media only screen and (max-width: 768px) {
+    #nosotros {
+        padding: 4rem 0.5rem 4rem 0.5rem;
+    }
+
+
+    .logo2 img {
+        max-width: 150px;
+        left: calc(50% - 105px);
+    }
+
+    .logo2::after {
+        width: 200%;
+        top: calc(50% - 10px);
+    }
+
+    #nosotros h2 {
+        font-size: 3rem;
+    }
+
+    #nosotros h3 {
+        font-size: 1.6rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    #nosotros p {
+        font-size: 0.8rem;
+        max-width: 900px;
+        margin: 1rem auto;
+    }
+    #nosotros p:last-of-type {
+        line-height: 1.5;
+    } 
+
+    .colaborar {
+        font-size: .6rem;
+        display: block;
+        border-radius: 0;
+        border-bottom-right-radius: 1.5rem;
+        border-top-left-radius: 1.5rem;
+        height: auto;
+    }
+}

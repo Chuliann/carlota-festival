@@ -1,0 +1,268 @@
+
+/*  */
+/*  */
+/* MAIN CONTENT */
+/*  */
+/*  */
+
+.hero {
+    height: 100vh;
+    position: relative;
+    background: url(../img/Fondo2.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Anton";
+    text-transform: uppercase;
+  }
+  
+  .boton-inscribirse {
+    position: absolute;
+    right: -28px;
+    top: 70px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .imagen-hero {
+    position: absolute;
+    left: -3px;
+    bottom: 20vh;
+    overflow: hidden;
+  }
+  
+  .hero-barras {
+    width: 100%;
+  }
+  
+  .hero-barrasMovil {
+    display: none;
+  }
+  
+  .hero-titulo {
+    position: absolute;
+    top: -5px;
+    left: 10vw;
+    font-size: 6.5vw;
+  
+  }
+  .hero-titulo2 {
+    position: absolute;
+    bottom: -5px;
+    left: 13vw;
+    color: var(--amarillo);
+    font-size: 6vw;
+  }
+  
+  
+  
+  
+  .imagen-hero2 {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+  }
+  
+  .hero-barras2 {
+    width: 100%;
+  }
+  
+  .hero-barras2Movil {
+    display: none;
+  }
+  
+  .hero-titulo3 {
+    position: absolute;
+    bottom: calc(50% - 3vw);
+    left: 20vw;
+    font-size: 4vw;
+    color: #fff;
+  }
+  
+  
+  .hashtags {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    color: brown;
+    padding: 5px 2rem;
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .hero-barras {
+      display: none;
+    }
+    
+    .hero-barrasMovil {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .hashtags {
+      font-size: 1.2rem;
+      padding: 1rem 0;
+    }
+  
+    
+    .imagen-hero {
+      bottom: 13vh;
+    }
+  
+    .hero {
+      overflow: hidden;
+    }
+  
+    .boton-inscribirse {
+      top: 40px;
+    }
+  
+    .boton-inscribirse img {
+      max-width: 250px;
+    }
+  
+    .hero-titulo {
+      font-size: 3rem;
+    }
+  
+    .hero-titulo2 {
+      font-size: 3rem;
+      bottom: -15px;
+    }
+  
+    .hero-titulo3 {
+      font-size: 1rem;
+      left: calc(50% - 30vw);
+    }
+  
+    .hero-barras2 {
+      display: none;
+    }
+    .hero-barras2Movil {
+      display: block;
+      width: 100%;
+    }
+  
+  }
+  
+  
+  
+  
+  .info {
+    background-color: rgb(17, 17, 17);
+    padding: 4rem 0rem 4rem 4rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 1rem;
+  }
+  
+  .info-poster {
+    width: 480px;
+    max-width: 33vw;
+    z-index: 2;
+  }
+  
+  
+  .titulo-info {
+    font-family: "Anton";
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-left: 5vw;
+  }
+  
+  .grande {
+    font-size: 3rem;
+  }
+  
+  .info-texto {
+    margin-top: 1.5rem;
+    background-color: var(--amarillo-suave);
+    padding: 4rem;
+    font-family: "MontserratRegular";
+    font-weight: 100;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .info-texto::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    background-color: rgb(17, 17, 17);
+    border-radius: 100%;
+    left: -45px;
+    top: calc(50% - 45px);
+    z-index: 1;
+  }
+  
+  .p-white {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+  
+  .negrita {
+    font-weight: bold;
+  }
+  
+  .p-1 {
+    margin-bottom: 2rem;
+  }
+  
+  .p-last {
+    margin-top: 2rem;
+  }
+  
+  .movil {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .web {
+      display: none;
+    }
+    .movil {
+      display: block;
+    }
+  
+    .info {
+      grid-template-columns: 1fr;
+      padding: 0;
+      overflow: clip;
+    }
+    .titulo-info {
+      font-size: 2.2rem;
+      padding: 1rem;
+      margin: 0;
+    }
+    .info-poster {
+      max-width: 90vw;
+      margin: 0 auto;
+      padding-bottom: 2rem;
+  
+    }
+  
+    .info-texto {
+      padding: 3rem 1rem;
+    }
+  
+    .info-texto::after {
+      content: "";
+      left: calc(50% - 45px);
+      top: -55px;
+    }
+    
+  
+  }
+  
+  
+  
+  

@@ -1,0 +1,90 @@
+@font-face {
+  display: swap;
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "MontserratSemiBold";
+  src: url(fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "MontserratBold";
+  src: url(fonts/Montserrat-Bold_0.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "MontserratRegular";
+  src: url(fonts/Montserrat-Regular_1.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "Anton";
+  src: url(fonts/Anton-Regular.ttf);
+  
+}
+
+@font-face {
+  display: swap;
+  font-family: "Source Sans Variable";
+  src: url(fonts/SourceSansVariable-Roman.otf);
+}
+
+:root {
+  --amarillo: #D6FF01;
+  --amarillo-suave: #c5e41f;
+  --rojo: #ff0000;
+  --morado: #b01d3a;
+  --negro-suave: rgb(17, 17, 17);
+  --negro-cafe: #21181b;
+}
+
+/* This will work on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--morado);
+}
+
+/* Targtes on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--morado);
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.amarillo {
+  color: var(--amarillo);
+}
+
+.blanco {
+  color:#fff;
+}
+
+
+
+
+
+
+
+

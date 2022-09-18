@@ -1,0 +1,162 @@
+/* FORMULARIO */
+#inscribirse {
+    background-image: url(../img/Fondo1.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#inscribirse h2 {
+    font-family: "Anton";
+    font-size: 5rem;
+    background-color: var(--negro-suave);
+    color: var(--amarillo);
+    padding: 1rem 10rem;
+    letter-spacing: 3px;
+    margin: 0;
+    text-align: center;
+}
+
+.formulario {
+    max-width: 900px;
+    margin: 5rem 0;
+}
+
+.cont-blanco {
+    background-color: #fff;
+    padding: 2rem;
+}
+
+.gris {
+    background-color: grey;
+    padding: 1rem 3rem 1rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+.email {
+    grid-column: 2 / 4;
+}
+
+.mensaje {
+    grid-column: 1 / 4;
+}
+
+.campo {
+    position: relative;
+    font-family: "Source Sans Variable";
+    margin: 1rem;
+}
+
+.input {
+    width: 100%;
+    border-radius: 0.2rem;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+.input:focus + .label {
+    bottom: 39px;
+    left: 0;
+}
+
+.label span {
+    color: gray;
+}
+
+.label {
+    font-size: 1rem;
+    color: #000;
+    position: absolute;
+    left: 6px;
+    bottom: 10px;
+    transition: all 0.2s ease-in;
+    pointer-events: none;
+}
+
+.label.fijar {
+    bottom: 39px;
+    left: 0;
+}
+
+.mensaje .input {
+    padding-bottom: 4rem;
+    font-family: "Source Sans Variable";
+}
+
+.mensaje .label {
+    top: 5px;
+    left: 10px;
+}
+
+.mensaje .label.fijar {
+    top: -19px;
+    left: 0;
+}
+
+.mensaje .input:focus + .label {
+    top: -19px;
+}
+
+.enviar {
+    grid-column: 1 / 4;
+    background-color: var(--morado);
+    color: #fff;
+    margin-left: 1rem;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-family: "Anton";
+    cursor: pointer;
+    border: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .formulario {
+        max-width: 90vw;
+        width: 100%;
+    }
+
+    #inscribirse h2 {
+        font-size: 3rem;
+        padding: 0;
+    }
+
+    .cont-blanco {
+        padding: 1rem;
+    }
+
+    .gris {
+        padding: 0.5rem 1.5rem 0.5rem 1rem;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+
+    .name {
+        grid-column: 1 / 4;
+    }
+
+    .email {
+        grid-column: 1 / 4;
+    }
+
+    .pais {
+        grid-column: 1 / 4;
+    }
+
+    .tel {
+        grid-column: 1 / 4;
+    }
+
+    .web {
+        grid-column: 1 / 4;
+    }
+
+    .mensaje {
+        grid-column: 1 / 4;
+    }
+}

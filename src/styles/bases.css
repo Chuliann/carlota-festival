@@ -1,0 +1,82 @@
+/* Bases */
+#bases {
+    background-color: var(--amarillo);
+    position: relative;
+    padding-bottom: 10rem;
+  }
+  
+  #bases p {
+      font-family: "MontserratRegular";
+  }
+  
+  #bases h2 {
+    font-family: "Anton";
+    letter-spacing: 4px;
+    text-align: center;
+    margin: 0;
+    padding: 3rem 0 2rem 0;
+    font-size: 7rem;
+    color: var(--morado);
+  }
+  
+  #bases h3 {
+    font-family: "Anton";
+    letter-spacing: 4px;
+    margin: 0;
+    font-size: 2rem;
+    color: var(--morado);
+  }
+  
+  .bases {
+    background-color: #fff;
+    padding: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  
+  }
+  
+  .descargar {
+    border: none;
+    background: none;
+    margin-top: 2rem;
+    max-width: 302px;
+    margin: 0 auto;
+    position: absolute;
+    cursor: pointer;
+    bottom: 30px; 
+    left: 0;
+    right: 0;
+  }
+  
+  #bases ul {
+    padding-left: 20px;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    #bases h2 {
+      padding: 3rem 0 2rem 0;
+      font-size: 5rem;
+      color: var(--morado);
+    }
+  
+    
+    
+    #bases h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+  
+  
+    .bases {
+      width: 100%;
+      overflow-y: scroll;
+    }
+  
+    .descargar {
+      bottom: 73px;
+    }
+  }
+  
+  
+  

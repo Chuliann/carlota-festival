@@ -1,0 +1,156 @@
+.idiomas {
+    background-image: url(../img/Fondo1.png);
+    height: 70vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 -1rem 0 -1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem ;
+}
+
+.boton-idioma {
+    border: none;
+    cursor: pointer;
+    color: var(--amarillo);
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 3rem;
+    font-family: "Anton";
+}
+
+.navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+}
+
+.logo {
+    max-width: 300px;
+}
+
+.logoMovil {
+    display: none;
+}
+
+/* CONTENEDOR DE LINEAS */
+.boton-hamburguesa {
+    /* // removes default border on button element */
+    border: 0;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 2;
+
+    /* positions the icon to the right and center aligns it vertically */
+    display: block;
+}
+
+/* LINEAS */
+.boton-hamburguesa span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--rojo);
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius: 2rem;
+    transition: all 500ms ease-in;
+    /* Esto de abajo para fijar las lineas */
+    transform-origin: 0px 100%;
+}
+
+.boton-hamburguesa:hover span {
+    background-color: rgb(110, 36, 36);
+}
+
+.nav-items {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: -100%;
+    width: 20%;
+    height: calc(100vh);
+    transition: all 0.4s ease-in-out;
+    z-index: 10;
+    padding: 5rem 2rem 2rem 2rem;
+    background-image: url(../img/Fondo1.png);
+}
+.nav-items.expandido {
+    right: 0;
+}
+
+.link {
+    font-family: "Anton";
+    color: #fff;
+    font-size: 3rem;
+    border: none;
+    background: none;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.blur-a #overlay {
+    display: block;
+}
+
+/* BLOQUEAR PANTALLA */
+#overlay {
+    /* fijo, no importa el scroll */
+    position: fixed;
+    /* ocupa todo lo visible */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* semi transparente */
+    opacity: 0.5;
+    background: black;
+    /* invisible y arriba de todo, exceto el dialog */
+    display: none;
+    z-index: 9;
+}
+
+.cross {
+    border: 0;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    z-index: 11;
+
+    display: none;
+}
+
+.expandido.cross {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .idiomas {
+        flex-direction: column;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .nav-items {
+        width: 50%;
+    }
+
+    .link {
+        font-size: 2rem;
+    }
+}
