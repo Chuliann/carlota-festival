@@ -61,10 +61,11 @@
   background-color: var(--morado);
 }
 
+
 html, body {
-  overflow-x: hidden;
   scroll-behavior: smooth;
   transition: all .5s;
+  overflow-x: hidden;
 }
 
 
@@ -84,9 +85,21 @@ p {
   color:#fff;
 }
 
+.fijarBody {
+  overflow: hidden;
+}
 
-
-
+.alerta {
+  text-align: center;
+  background-color: var(--rojo);
+  color: #fff;
+  font-weight: bold;
+  padding: 1rem;
+  margin: 1rem 0;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  grid-column: 1 / 4;
+}
 
 
 

@@ -1,12 +1,17 @@
 .idiomas {
     background-image: url(../img/Fondo1.webp);
-    height: 70vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0 -1rem 0 -1rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 2rem 5rem;
 }
 
@@ -17,6 +22,7 @@
     background-color: transparent;
     font-weight: bold;
     font-size: 3rem;
+    margin: 0 1rem;
     font-family: "Anton";
 }
 
@@ -28,22 +34,17 @@
     padding: 1rem 1rem;
     box-sizing: border-box;
     height: 82px;
-}
-.navbar.navarriba {
+
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     transition: transform 0.2s;
     z-index: 10;
-    
 }
 
-#festival.barraArriba {
-    padding-top: 82px;
-}
 
-.navbar.nav-oculta {
+.nav-oculta .navbar {
     transform: translateY(calc(-1 * 82px));
 }
 
@@ -95,7 +96,7 @@
     height: calc(100vh);
     transition: all 0.4s ease-in-out;
     z-index: 10;
-    padding: 5rem 2rem 2rem 2rem;
+    padding: 5rem 2rem 2rem 1rem;
     background-image: url(../img/Fondo1.webp);
 }
 .nav-items.expandido {
@@ -119,8 +120,8 @@
 
 .idiomas-nav {
     display: flex;
-    margin-top: 2rem;
-    justify-content: center;
+    margin-top: 1rem;
+    justify-content: start;
 }
 .idiomas-nav button{
     font-family: "MontserratBold";
@@ -130,9 +131,13 @@
     background: none;
     color: #fff;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.idiomas-nav button:hover {
+    color: var(--amarillo);
 }
 
-.blur-a #overlay {
+.fijarBody #overlay {
     display: block;
 }
 
@@ -201,6 +206,10 @@
         flex-direction: column;
     }
 
+    .boton-idioma {
+        margin: 1rem 0;
+    }
+
     .logo {
         max-width: 120px;
     }
@@ -237,7 +246,4 @@
         height: 62px;
     }
     
-    #festival.barraArriba {
-        padding-top: 62px;
-    }
 }

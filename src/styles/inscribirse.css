@@ -62,6 +62,12 @@
 .input:focus + .label {
     bottom: 39px;
     left: 0;
+    color: #fff;
+}
+
+.mensaje .input:focus + .label span,
+.input:focus + .label span {
+    display: none;
 }
 
 .label span {
@@ -76,12 +82,13 @@
     bottom: calc(50% - 8px);
     transition: all 0.2s ease-in;
     pointer-events: none;
-
+    white-space: nowrap;
 }
 
 .label.fijar {
     bottom: 39px;
     left: 0;
+    color: #fff;
 }
 
 .mensaje .input {
@@ -103,6 +110,10 @@
     top: -21px;
 }
 
+.label.fijar span {
+    display: none;
+}
+
 .enviar {
     grid-column: 1 / 4;
     background-color: var(--morado);
@@ -117,8 +128,14 @@
 
 @media only screen and (max-width: 768px) {
     .formulario {
-        width: 100%;
+        width: 100vw;
     }
+
+    #inscribirse {
+        margin: 0;
+    }
+    
+
 
     #inscribirse h2 {
         font-size: 3rem;
@@ -142,7 +159,7 @@
     }
 
     .enviar {
-        margin-right: .5rem;
+        margin: 0 .5rem 0 0;
     }
 
     .label {
@@ -165,8 +182,9 @@
         grid-column: 1 / 4;
     }
 
-    .web {
+    .web.campo {
         grid-column: 1 / 4;
+        display: block;
     }
 
     .mensaje {

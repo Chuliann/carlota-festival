@@ -1,89 +1,69 @@
-import barras from "../img/barras.webp";
-import barras2 from "../img/barras2.webp";
-import inscribete from "../img/inscribete.webp";
-import barrasMovil from "../img/barras-movil.webp";
-import barras2Movil from "../img/barras2Movil.webp";
-import cartel from "../img/cartel.webp";
+import cartelesp from "../img/cartelesp.webp";
+import carteling from "../img/carteling.webp";
+import num1 from "../img/num1.webp";
+import num2 from "../img/num2.webp";
+import num3 from "../img/num3.webp";
+import premioing from "../img/premioing.webp";
+import premioesp from "../img/premioesp.webp";
 import "../styles/festival.css";
+import { info } from "../utils/lang.js";
 
-const Info = () => {
+const Info = ({ idioma }) => {
     return (
         <main id="festival">
-            <div className="hero">
-                <div className="imagen-hero">
-                    <img className="hero-barras" alt="" src={barras}></img>
-                    <p className="hero-titulo">Concurso de video</p>
-                    <p className="hero-titulo2">Y cine militante</p>
+            
 
-                    <img className="hero-barrasMovil" alt="" src={barrasMovil}></img>
-                </div>
-                <div className="imagen-hero2">
-                    <img className="hero-barras2" alt="" src={barras2}></img>
-                    <img className="hero-barras2Movil" alt="" src={barras2Movil}></img>
-                    <p className="hero-titulo3">
-                        graba y edita un video en 80 horas
-                    </p>
-                </div>
-
-                <button className="boton-inscribirse" onClick={() => document.querySelector('#inscribirse').scrollIntoView({behavior: "smooth"})}>
-                    <img src={inscribete}></img>
-                </button>
-            </div>
-
-            <div className="hashtags">
-                <p>
-                    #artemilitante #emancipacion #porladignidad #resistencia
-                    #antiimperialismo #lucha #cinepopular #luchasindical
-                    #desdeabajo #contraelsistema #anticolonialismo #liberacion
-                </p>
-            </div>
+            
 
             <div className="info">
                 <p className="blanco titulo-info movil">
-                    <span className="grande">Graba y edita</span>
-                    <br></br> un documental en{" "}
-                    <span className="amarillo">80 horas.</span>
+                    <span className="grande">{info[idioma]["tittle1_1"]}</span>
+                    <br></br> {info[idioma]["tittle1_2"]}
+                    <span className="amarillo"> {info[idioma]["tittle1_3"]}.
+                    </span>
                 </p>
-                <img className="info-poster" src={cartel} alt="poster"></img>
+                <img className="info-poster" src={idioma === "es" ? cartelesp : carteling} alt="poster"></img>
                 <div>
                     <p className="blanco titulo-info web">
-                        <span className="grande">Graba y edita</span>
-                        <br></br> un documental en{" "}
-                        <span className="amarillo">80 horas.</span>
+                        <span className="grande">
+                            {info[idioma]["tittle1_1"]}
+                        </span>
+                        <br></br> {info[idioma]["tittle1_2"]}
+                        <span className="amarillo"> {info[idioma]["tittle1_3"]}. </span>
                     </p>
                     <div className="info-texto">
-                        <p className="p-1">
-                            Atrévete a aportar un proyecto radical, autentico,
-                            realista, utópico, revolucionario, inconformista,
-                            antisistema, lleno de amor (o de odio) de apoyo a la
-                            emancipación de las clases populares, contra los
-                            imperios, por la dignidad y por la libertad.
-                        </p>
+                            <p className="p-1">
+                                {info[idioma]["text1"]}.
+                            </p>
+                        
 
-                        <p className="p-white">Primer Premio</p>
-                        <p>
-                            Premio económico de{" "}
-                            <span className="negrita">500 USD</span> y trofeo{" "}
-                            <span className="negrita"> CARLOTA</span>
-                        </p>
-                        <p className="p-white">Segundo Premio</p>
-                        <p>
-                            Premio económico de{" "}
-                            <span className="negrita">200 USD</span> y trofeo{" "}
-                            <span className="negrita"> CARLOTA</span>
-                        </p>
-                        <p className="p-white">Tercer Premio</p>
-                        <p>
-                            Trofeo <span className="negrita">CARLOTA</span>
-                        </p>
+                            <div className="subtittle-img">
+                                <img src={num1} alt=""></img>
+                                <p className="p-white">{info[idioma]["subtittle1"]}</p>
+                            </div>
+                            <p> {info[idioma]["text2_1"]} <span className="negrita">500 USD</span> {info[idioma]["text2_2"]} <span className="negrita"> CARLOTA</span> {info[idioma]["text2_3"]}
+                            </p>
+                            <div className="subtittle-img img2">
+                            <img src={num2} alt=""></img>
+                            <p className="p-white">{info[idioma]["subtittle2"]}</p>
+                            </div>
+                            <p> {info[idioma]["text2_1"]} <span className="negrita">200 USD</span> {info[idioma]["text2_2"]} <span className="negrita"> CARLOTA</span> {info[idioma]["text2_3"]}
+                            </p>
+                            <div className="carta-contenedor">
+                            <div>
+                            <div className="subtittle-img img3">
+                                <img src={num3} alt=""></img>
+                                <p className="p-white">{info[idioma]["subtittle3"]}</p>
+                            </div>
+                            <p>
+                                {info[idioma]["text3_1"]} <span className="negrita">CARLOTA</span> {info[idioma]["text3_2"]}
+                            </p>
+                            </div>
+                            <img className="img-sorpresa" src={`${idioma === "en" ? premioing : premioesp}`} alt=""></img>
+                        </div>
 
-                        <p className="p-last">
-                            Para <span className="negrita">cineastas</span> y{" "}
-                            <span className="negrita">activistas</span> de todo
-                            el mundo es una posibilidad de aportar trabajos que
-                            sean apreciados por su compromiso con causas
-                            politicas.
-                        </p>
+                        <p className="p-last"> {info[idioma]["text4_1"]} <span className="negrita"> {info[idioma]["text4_2"]} </span> {info[idioma]["text4_3"]} <span className="negrita"> {info[idioma]["text4_4"]} </span> {info[idioma]["text4_5"]}. </p>
+                        
                     </div>
                 </div>
             </div>

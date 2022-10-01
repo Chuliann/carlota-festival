@@ -1,25 +1,34 @@
+import { useEffect, useState } from "react";
 import logo from "../img/logo.webp";
 import cerrar from "../img/cerrar.svg";
 import slider from "../img/slide.webp";
-import { useEffect, useState } from "react";
+import barras from "../img/barras.webp";
+import barras2 from "../img/barras2.webp";
+import barrasMovil from "../img/barras-movil.webp";
+import barras1movil from "../imgviejas/barras1movil.png";
+import barras2movil from "../imgviejas/barras2movil.png";
 import "../styles/header.css";
+import { header, hero } from "../utils/lang.js";
 
-const Header = () => {
+const Header = ({ handleIdioma, idioma }) => {
     const [expandido, setExpandido] = useState(false);
     const [navOculta, setNavOculta] = useState(false);
-    const [comportamiento, setComportamiento] = useState(false);
+
 
     const handleMenu = () => {
         setExpandido(!expandido);
-        document.querySelector("body").classList.toggle("blur-a");
+        document.querySelector("body").classList.toggle("fijarBody");
+        document.querySelector("html").classList.toggle("fijarBody");
     };
 
     const subir = () => {
-      if(expandido) {
-        handleMenu();
-      }
-      document.querySelector('#inicio').scrollIntoView({ behavior: "smooth" });
-    }
+        if (expandido) {
+            handleMenu();
+        }
+        document
+            .querySelector("#inicio")
+            .scrollIntoView({ behavior: "smooth" });
+    };
 
     const handleNav = (valor) => {
         handleMenu();
@@ -30,19 +39,13 @@ const Header = () => {
 
     useEffect(() => {
         let lastScroll = window.scrollY;
-        let navPos = window.visualViewport.height * 70 / 100 + 62;
         const handleScroll = (event) => {
-            if (lastScroll > navPos) {
-                setComportamiento(true);
-                if (lastScroll < window.scrollY) {
-                    setNavOculta(true);
-                } else {
-                    setNavOculta(false);
-                }
+            if (lastScroll < window.scrollY) {
+                setNavOculta(true);
             } else {
                 setNavOculta(false);
-                setComportamiento(false);
             }
+
             lastScroll = window.scrollY;
         };
 
@@ -54,18 +57,11 @@ const Header = () => {
     }, []);
 
     return (
-        <header id="inicio">
-            <div className="idiomas">
-                <button className="boton-idioma">ESPAÑOL</button>
-                <button className="boton-idioma">ENGLISH</button>
-                <button className="boton-idioma">DEUTSCH</button>
-            </div>
+        <header id="inicio" className={`${navOculta ? "nav-oculta" : ""} `}>
             <nav
-                className={`navbar ${navOculta ? "nav-oculta" : ""} ${
-                    comportamiento ? "navarriba" : ""
-                }`}
+                className="navbar"
             >
-                <img className="logo" alt="" src={logo}></img>
+                <img className="logo" alt="logo" src={logo}></img>
                 <button
                     onClick={() => handleMenu()}
                     className="boton-hamburguesa"
@@ -86,47 +82,78 @@ const Header = () => {
                         value="inicio"
                         onClick={(e) => handleNav(e.target.value)}
                     >
-                        Inicio
+                        { header[idioma]["nav1"] }
                     </button>
                     <button
                         className="link"
                         value="festival"
                         onClick={(e) => handleNav(e.target.value)}
                     >
-                        Festival
+                        { header[idioma]["nav2"] }
                     </button>
                     <button
                         className="link"
                         value="inscribirse"
                         onClick={(e) => handleNav(e.target.value)}
                     >
-                        Inscribirse
+                        { header[idioma]["nav3"] }
                     </button>
                     <button
                         className="link"
                         value="bases"
                         onClick={(e) => handleNav(e.target.value)}
                     >
-                        Bases
+                        { header[idioma]["nav4"] }
                     </button>
                     <button
                         className="link"
                         value="nosotros"
                         onClick={(e) => handleNav(e.target.value)}
                     >
-                        Nosotros
+                        { header[idioma]["nav5"] }
                     </button>
                     <div className="idiomas-nav">
-                        <button>ES</button>
-                        <button>EN</button>
-                        <button>GN</button>
+                        <button onClick={() => { handleIdioma("es"); handleMenu() }}>ES</button>
+                        <button onClick={() => { handleIdioma("en"); handleMenu() }}>EN</button>
                     </div>
                 </div>
             </nav>
+            
+            <div className="hero">
+                <div className="imagen-hero">
+                    <img className="hero-barras" alt="" src={barras}></img>
+                    <p className="hero-titulo">{hero[idioma]["tittle1"]}</p>
+                    <p className="hero-titulo2">{hero[idioma]["tittle2"]}</p>
+
+                </div>
+                
+            
+                <div className="imagen-hero2">
+                    <img className="hero-barras2" alt="" src={barras2}></img>
+                    <p className="hero-titulo3">{hero[idioma]["tittle3"]}</p>
+                </div>
+
+                <button
+                    className="boton-inscribirse"
+                    onClick={() =>
+                        document
+                            .querySelector("#inscribirse")
+                            .scrollIntoView({ behavior: "smooth" })
+                    }
+                >
+                    {hero[idioma]["button"]}
+                </button>
+            </div>
+
+            <div className="hashtags">
+                <p>{hero[idioma]["hashtags"]}</p>
+            </div>
 
             <div id="overlay" onClick={() => handleMenu()}></div>
-            <button 
-              onClick={() => subir()} className={`arrow-up ${!navOculta && comportamiento ? "comportamiento" : ""}`}>
+            <button
+                onClick={() => subir()}
+                className={`arrow-up ${!navOculta && !expandido ? "comportamiento" : ""}`}
+            >
                 <img src={slider} alt="up-arrow"></img>
             </button>
         </header>
