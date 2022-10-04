@@ -95,10 +95,15 @@ p {
   color: #fff;
   font-weight: bold;
   padding: 1rem;
-  margin: 1rem 0;
+  margin: .5rem auto 1rem auto;
+  width: 70%;
   text-transform: uppercase;
   font-family: "Montserrat";
   grid-column: 1 / 4;
+}
+
+.alerta.exito {
+  background-color: #01f001;
 }
 
 

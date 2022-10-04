@@ -4,9 +4,6 @@ import cerrar from "../img/cerrar.svg";
 import slider from "../img/slide.webp";
 import barras from "../img/barras.webp";
 import barras2 from "../img/barras2.webp";
-import barrasMovil from "../img/barras-movil.webp";
-import barras1movil from "../imgviejas/barras1movil.png";
-import barras2movil from "../imgviejas/barras2movil.png";
 import "../styles/header.css";
 import { header, hero } from "../utils/lang.js";
 

@@ -14,6 +14,7 @@ const Form = ({idioma}) => {
         mensaje: ""
     })
     const [error, setError] = useState("");
+    const [corregir, setCorregir] = useState(false);
 
     const handleForm = (e) => {
         setData({
@@ -23,12 +24,6 @@ const Form = ({idioma}) => {
         
     }
 
-    useEffect(() => {
-        setTimeout(() => {
-            setError("");
-        }, 5000)
-    }, [error])
-
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,27 +31,42 @@ const Form = ({idioma}) => {
         
         if(data.nombre === "" || data.email === "" || data.pais === "") {
             setError(form[idioma]["campos"]);
+            setCorregir(true);
             return;
         }
-
+        setCorregir(false);
         
+        const formulario = {
+            ...data,
+            idioma
+        }
+
         try {
-            await fetch('http://localhost:4000/api', {
+            await fetch("http://127.0.0.1:4000/api", {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify(formulario),
             headers: {
                 "Content-Type": "application/json",
             } 
             })
             .then(response => response.json())
             .then(data => {if(data.ok) {
-                setError("Registered inscription")
+                setError(form[idioma]["camposok"])
             }});
         } catch(error) {
             console.log(error);
         }
         
+        
+        
     }
+    useEffect(() => {
+        if(error !== form[idioma]["camposok"]) {
+            setTimeout(() => {
+                setError("");
+            }, 5000);
+        } 
+    }, [error])
 
     return (
         <div id="inscribirse">
@@ -66,7 +76,7 @@ const Form = ({idioma}) => {
                     <div className="gris">
                         <div className="campo name">
                             <input 
-                                className="input"
+                                className={`input ${corregir && data.nombre === "" ? "completefield" : ""}`}
                                 type="text"
                                 id="nombre"
                                 onChange={e => handleForm(e)}
@@ -75,7 +85,7 @@ const Form = ({idioma}) => {
                         </div>
                         <div className="campo email">
                             <input 
-                                className="input"
+                                className={`input ${corregir && data.email === "" ? "completefield" : ""}`}
                                 type="email"
                                 id="email"
                                 onChange={e => handleForm(e)}
@@ -84,7 +94,7 @@ const Form = ({idioma}) => {
                         </div>
                         <div className="campo pais">
                             <input 
-                                className="input"
+                                className={`input ${corregir && data.pais === "" ? "completefield" : ""}`}
                                 type="text"
                                 id="pais"
                                 onChange={e => handleForm(e)}
@@ -119,7 +129,9 @@ const Form = ({idioma}) => {
                             <label className={`label ${data.mensaje.length > 0 ? "fijar" : ""}`}>{form[idioma]["mensaje"]} <span>{form[idioma]["mensaje2"]}</span></label>
                         </div>
                         {error && error !== "" ? (
-                            <Alerta>{error}</Alerta>
+                            <Alerta
+                                mensaje={form[idioma]["camposok"]}
+                            >{error}</Alerta>
                         ) : null}
                         <input 
                             type="submit"

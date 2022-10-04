@@ -122,7 +122,8 @@ export const form = {
         "mensaje": "Message",
         "mensaje2": "(optional)",
         "submit": "Submit",
-        "campos": "Please, complete all the required fields"
+        "campos": "Please, complete all the required fields",
+        "camposok": "Registered inscription, please check your email inbox"
     },
     "es": {
         "tittle": "INSCRÍBETE",
@@ -136,7 +137,8 @@ export const form = {
         "mensaje": "Mensaje",
         "mensaje2": "(opcional)",
         "submit": "Enviar",
-        "campos": "Complete los campos obligatorios"
+        "campos": "Complete los campos obligatorios",
+        "camposok": "Registracion exitosa, por favor revise su bandeja de entrada"
     }
 }
 
@@ -190,7 +192,7 @@ export const bases = {
         "text24_1": "",
         "text25": "Dos premios sorpresa adicionales!!!",
 
-        "link": "https://drive.google.com/drive/folders/1xmbiljmpp9tNUQiEPwmvhaCCmKoxc-GE?usp=sharing",
+        "link": "https://drive.google.com/drive/folders/12m7ThM3CP6D3zuCjfC2FqH7Fa3jxISKm?usp=sharing",
         "download": "DESCARGAR PDF"
     },
     "en": {
