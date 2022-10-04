@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/carlotai/public_html/
+    - export DEPLOYPATH=/home/carlotai/public_html/festival.carlota.international/
     - /bin/cp -R dist/assets $DEPLOYPATH
     - /bin/cp -R dist/index.html $DEPLOYPATH
