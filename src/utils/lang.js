@@ -155,7 +155,7 @@ export const bases = {
         "text2": "Este concurso se celebra de forma online y pueden participar cineastas, activistas, videoactivistas y en general cualquier persona de cualquier país. De forma individual o grupal",
         "text3": "Las personas que participen tienen 80 horas para ",
         "text3_1": "grabar y editar un documental",
-        "text4": "El concurso comienza el 13 de marzo de 2022 a las 12:00 del mediodia horario de Jerusalen, Palestina. A esa hora se dara a conocer un requisito tecnico que debe cumplirse para garantizar que los documentales se graban en el lapso de 80 horas",
+        "text4": "El concurso comienza el 17 de marzo de 2022 a las 12:00 del mediodia horario de Jerusalen, Palestina. A esa hora se dara a conocer un requisito tecnico que debe cumplirse para garantizar que los documentales se graban en el lapso de 80 horas",
         "text5": "Las personas que desean participar deben tener mas de 18 años",
         "text6": "La inscripción para el concurso inicial", 
         "text6_1": "y cierra una hora antes de que comience el concurso, es decir, una hora antes de que se haga público el requisito técnico citado anteriormente.",
@@ -204,7 +204,7 @@ export const bases = {
         "text2": "This competition is held online and filmmakers, activists, video activists and in general anyone from any country can participate. Individually or in groups",
         "text3": "Participants have 80 hours to ",
         "text3_1": "record and edit a documentary",
-        "text4": "The contest begins on March 15, 2023 at 12:00 noon Jerusalem, Palestine time. At that time, a technical requirement will be announced that must be met to ensure that documentaries are shot within the 80-hour time frame",
+        "text4": "The contest begins on March 17, 2023 at 12:00 noon Jerusalem, Palestine time. At that time, a technical requirement will be announced that must be met to ensure that documentaries are shot within the 80-hour time frame",
         "text5": "Those wishing to participate must be over 18 years of age",
         "text6": "Registration for the competition starts on", 
         "text6_1": "and closes one hour before the competition starts, i.e. one hour before the technical requirement mentioned above is made public",
@@ -250,7 +250,7 @@ export const nosotros = {
     "es": {
         "tittle": "SOBRE NOSOTROS",
         "subtittle1": "SIGLO XIX",
-        "text1": "fue una esclava cubana que lideró uno de los alzamientos de esclavos más significativos de la isla. Aunque no logró el objetivo de liberar a los esclavos, sino que fue apresada y descuartizada públicamente junto a su pareja sentimental (otra esclava), su ejemplo plantó la semilla de la Revolución y la emancipación",
+        "text1": "fue una esclava cubana que lideró uno de los alzamientos de esclavos más significativos de la isla",
         
         "subtittle2": "SIGLO XX",
         "text2": "En honor a la esclava Carlota, se llamó así una operación militar internacionalista que luchó en África contra el Apartheid",
@@ -264,13 +264,13 @@ export const nosotros = {
     },
     "en": {
         "tittle": "ABOUT US",
-        "subtittle1": "19TH CENTURY",
-        "text1": "was a Cuban slave who led one of the most significant slave uprisings on the island. Although she did not achieve the goal of freeing the slaves, but was imprisoned and publicly dismembered along with her sentimental partner (another slave), her example planted the seed of revolution and emancipation",
+        "subtittle1": "19ST CENTURY",
+        "text1": "was a Cuban slave who led one of the most significant slave uprisings on the island",
 
-        "subtittle2": "20TH CENTURY",
+        "subtittle2": "20ST CENTURY",
         "text2": "In honor of the slave Carlota, an internationalist military operation that fought against Apartheid in Africa was named after her",
 
-        "subtittle3": "21TH CENTURY",
+        "subtittle3": "21ST CENTURY",
         "text3": "In 2023, the first edition of the",
         "text3_1": "Politic Film and Video Competition will be held. This Festival sides with those who fight against capitalism. We simply want to recognize the reality, and dignify the efforts to change it. This project is supported by different political and social organizations that fight to transform reality",
 

@@ -17,10 +17,10 @@ const Nosotros = ({idioma}) => {
             </p>
             <h3>{nosotros[idioma]["subtittle2"]}</h3>
             <p>
-                {nosotros[idioma]["text2"]}
+                {nosotros[idioma]["text2"]}.
             </p>
             <h3>{nosotros[idioma]["subtittle3"]}</h3>
-            <p className="bold">{nosotros[idioma]["text3"]} <span className="amarillo">CARLOTA</span>. {nosotros[idioma]["text3_1"]} .</p>
+            <p className="bold">{nosotros[idioma]["text3"]} <span className="amarillo">CARLOTA</span>. {nosotros[idioma]["text3_1"]}.</p>
             <span className="colaborar">{nosotros[idioma]["support"]}</span>
             <img className="slider" src={slide} alt=""></img>
         </div>
