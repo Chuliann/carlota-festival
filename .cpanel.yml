@@ -4,3 +4,12 @@ deployment:
     - export DEPLOYPATH=/home/carlotai/public_html/festival.carlota.international/
     - /bin/cp -R dist/assets $DEPLOYPATH
     - /bin/cp -R dist/index.html $DEPLOYPATH
+    - /bin/cp -R dist/android-chrome-192x192.png $DEPLOYPATH
+    - /bin/cp -R dist/apple-touch-icon.png $DEPLOYPATH
+    - /bin/cp -R dist/browserconfig.xml $DEPLOYPATH
+    - /bin/cp -R dist/favicon-16x16.png $DEPLOYPATH
+    - /bin/cp -R dist/favicon-32x32.png $DEPLOYPATH
+    - /bin/cp -R dist/favicon.ico $DEPLOYPATH
+    - /bin/cp -R dist/mstile-150x150.png $DEPLOYPATH
+    - /bin/cp -R dist/safari-pinned-tab.svg $DEPLOYPATH
+    - /bin/cp -R dist/site.webmanifest $DEPLOYPATH
