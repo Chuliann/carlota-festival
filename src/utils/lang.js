@@ -264,10 +264,10 @@ export const nosotros = {
     },
     "en": {
         "tittle": "ABOUT US",
-        "subtittle1": "19ST CENTURY",
+        "subtittle1": "19TH CENTURY",
         "text1": "was a Cuban slave who led one of the most significant slave uprisings on the island",
 
-        "subtittle2": "20ST CENTURY",
+        "subtittle2": "20TH CENTURY",
         "text2": "In honor of the slave Carlota, an internationalist military operation that fought against Apartheid in Africa was named after her",
 
         "subtittle3": "21ST CENTURY",

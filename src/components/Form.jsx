@@ -42,7 +42,7 @@ const Form = ({idioma}) => {
         }
 
         try {
-            await fetch("http://127.0.0.1:4000/api", {
+            await fetch("http://127.0.0.1/api", {
             method: "POST",
             body: JSON.stringify(formulario),
             headers: {
@@ -50,9 +50,9 @@ const Form = ({idioma}) => {
             } 
             })
             .then(response => response.json())
-            .then(data => {if(data.ok) {
+            .then(data => console.log(data)/* {if(data.ok) {
                 setError(form[idioma]["camposok"])
-            }});
+            }} */);
         } catch(error) {
             console.log(error);
         }
