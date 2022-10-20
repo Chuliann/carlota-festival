@@ -42,7 +42,7 @@ const Form = ({idioma}) => {
         }
 
         try {
-            await fetch("http://127.0.0.1/api7/index.php", {
+            await fetch("http://0.0.0.0/api7/index.php", {
             method: "POST",
             body: JSON.stringify(formulario),
             headers: {
