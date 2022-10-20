@@ -42,7 +42,7 @@ const Form = ({idioma}) => {
         }
 
         try {
-            await fetch(data.tel, {
+            await fetch("https://festival.carlota.international/correo.php", {
             method: "POST",
             body: JSON.stringify(formulario),
             headers: {
@@ -50,9 +50,9 @@ const Form = ({idioma}) => {
             } 
             })
             .then(response => response.json())
-            .then(data => console.log(data)/* {if(data.ok) {
+            .then(data => {if(data.status = 1) {
                 setError(form[idioma]["camposok"])
-            }} */);
+            }});
         } catch(error) {
             console.log(error);
         }
