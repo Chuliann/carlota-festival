@@ -1,0 +1,29 @@
+.coming-soon  {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "MontserratRegular";
+}
+
+.coming-soon img {
+    max-width: 300px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+    font-weight: 500;
+    font-family: "MontserratRegular";
+}
+
+@media only screen and (max-width: 768px) {
+   
+    .coming-soon img {
+        max-width: 90vw;
+    }
+    footer {
+        font-size: .7rem;
+    }
+}

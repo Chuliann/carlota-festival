@@ -6,6 +6,8 @@ import Bases from "./components/Bases.jsx";
 import Nosotros from "./components/Nosotros.jsx";
 import Patrocinadores from "./components/Patrocinadores.jsx";
 import { useEffect } from "react";
+import "./styles/comingsoon.css";
+import logoComing from "./imgviejas/logocoming.jpg";
 
 function App() {
     const [idioma, setIdioma] = useState("");
@@ -27,7 +29,7 @@ function App() {
 
     return (
         <div className="App">
-            {idioma === "" ? (
+            {/* {idioma === "" ? (
                 <div className="idiomas">
                     <button
                         onClick={() => handleIdioma("es", true)}
@@ -49,10 +51,13 @@ function App() {
                     <Form idioma={idioma} />
                     <Bases idioma={idioma} />
                     <Nosotros idioma={idioma} />
-                    {/* Patrocinadores */}
                 </>
-            )}
-            
+            )} */}
+            <div className="coming-soon" >
+                <img src={logoComing}></img>
+                <h2>Proximamente...</h2>
+                <footer>fernando@fernandoromeroforsthuber.com</footer>
+            </div>
         </div>
     );
 }
